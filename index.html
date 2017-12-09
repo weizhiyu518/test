@@ -37,14 +37,14 @@ var g_PersonCount = 500;//参加抽奖人数
 var g_Timer;
 var running = false;
 var staffs=[
-{"id":1,"name":"张三"},
-{"id":2,"name":"李四"},
-{"id":3,"name":"赵五"},
-{"id":4,"name":"王六"},
-{"id":5,"name":"小红"},
-{"id":6,"name":"小蓝"},
-{"id":7,"name":"摩拜"},
-{"id":8,"name":"滴滴"}
+{"id":1,"staff_name":"张三"},
+{"id":2,"staff_name":"李四"},
+{"id":3,"staff_name":"赵五"},
+{"id":4,"staff_name":"王六"},
+{"id":5,"staff_name":"小红"},
+{"id":6,"staff_name":"小蓝"},
+{"id":7,"staff_name":"摩拜"},
+{"id":8,"staff_name":"滴滴"}
 ]
 function beginRndNum(trigger){
 	if(running){
@@ -63,9 +63,9 @@ function beginRndNum(trigger){
 
 function updateRndNum(){
 	var num = Math.floor(Math.random()*7+1);
-	var name=staffs[num].name;
+	var reward_name=staffs[num].staff_name;
 	var info=num
-	$('#ResultNum').html(num+'('+name+')');
+	$('#ResultNum').html(num+'('+staff_name+')');
 }
 
 function beginTimer(){
